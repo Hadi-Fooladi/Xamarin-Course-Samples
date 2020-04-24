@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  mc:Ignorable="d"
+  x:Class="CalcApp.MainPage">
+
+	<ContentPage.Resources>
+		<Style TargetType="Button">
+			<Setter Property="BackgroundColor" Value="Cyan" />
+			<Setter Property="FontSize" Value="20" />
+		</Style>
+	</ContentPage.Resources>
+
+	<StackLayout>
+		<Entry x:Name="TB" HorizontalOptions="FillAndExpand" FontSize="24" HorizontalTextAlignment="End" Text="0" IsReadOnly="True" />
+
+		<Grid x:Name="G" Padding="3" RowSpacing="3" ColumnSpacing="3" VerticalOptions="FillAndExpand">
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+
+			<!--<Button Text="1" Grid.Row="0" Grid.Column="0" />
+			<Button Text="2" Grid.Row="0" Grid.Column="1" />
+			<Button Text="3" Grid.Row="0" Grid.Column="2" />
+
+			<Button Text="4" Grid.Row="1" Grid.Column="0" />
+			<Button Text="5" Grid.Row="1" Grid.Column="1" />
+			<Button Text="6" Grid.Row="1" Grid.Column="2" />
+
+			<Button Text="7" Grid.Row="2" Grid.Column="0" />
+			<Button Text="8" Grid.Row="2" Grid.Column="1" />
+			<Button Text="9" Grid.Row="2" Grid.Column="2" />
+
+			<Button Text="0" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" />-->
+
+			<Button Text="DEL" Grid.Row="0" Grid.Column="3" BackgroundColor="YellowGreen" Clicked="bDel_Clicked" />
+			<Button Text="+" Grid.Row="1" Grid.Column="3" BackgroundColor="YellowGreen" Clicked="bPlus_Clicked" />
+			<Button Text="-" Grid.Row="2" Grid.Column="3" BackgroundColor="YellowGreen" Clicked="bMinus_Clicked" />
+			<Button Text="=" Grid.Row="3" Grid.Column="3" BackgroundColor="YellowGreen" Clicked="bEqual_Clicked" />
+		</Grid>
+	</StackLayout>
+</ContentPage>
